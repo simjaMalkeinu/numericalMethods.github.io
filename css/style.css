@@ -1,0 +1,58 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    column-gap: 16px;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 15px rgba(0, 123, 131, 0.25);
+    backdrop-filter: blur(15px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 15px;
+
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 500ms;
+}
+
+.iconify{
+    font-size: 68px;
+}
+
+.card h3{
+    font-size: 15px;
+    color: var(--txt-subtitle);
+    margin-top: 2em;
+}
+
+.card h2{
+    font-size: 30px;
+    color: var(--txt-head);
+}
+
+a.card:hover{
+    transform: scale(1.1);
+    background: var(--txt-subtitle);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+a.card:hover h2,
+a.card:hover h3{
+    color: white;
+}
+
+a.card:hover .iconify{
+    fill: white;
+    stroke: white;
+    color: white;
+}

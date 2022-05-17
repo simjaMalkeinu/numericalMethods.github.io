@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo de Jacobi</title>
+
+    <!-- FONT AWEASOME -->
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="../css/presets.css">
+    <link rel="stylesheet" href="../css/components.css">
+
+</head>
+
+<body>
+    <div class="fondo">
+        <div class="uno"></div>
+        <div class="dos"></div>
+    </div>
+    <a href="../"><span class="iconify back" data-icon="bi:arrow-left-square-fill"></span></a>
+
+    <header>
+        <ul>
+            <li><a href="#" class="header-model">METODO DE JACOBI</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <form class="">
+            <label class="animate__animated animate__fadeInUp">
+                <p>Tamaño de la matriz</p>
+                <input type="number" placeholder="Tamaño" name="tam" id="tam" required>
+
+            </label>
+            <button class="animate__animated animate__fadeInUp" onclick="llenarMatriz(event)" id="btnMatriz">Llenar
+                matriz</button>
+            <label class="animate__animated animate__fadeInUp animate__delay-2s">
+                <p>Matriz</p>
+                <div id="matriz" class="matriz">
+
+                </div>
+            </label>
+
+            <label class="animate__animated animate__fadeInUp animate__delay-2s">
+                <p>Valores independientes</p>
+                <div id="valInd" class="matriz">
+                </div>
+            </label>
+
+            <label class="animate__animated animate__fadeInUp animate__delay-4s">
+                <p>Error Logico</p>
+                <input type="number" placeholder="Example: 0.001" name="error" required>
+            </label>
+            <button type="submit" class="animate__animated animate__fadeInUp animate__delay-5s" onclick="getData(event)"
+                id="subir">continuar</button>
+        </form>
+
+        <div id="table">
+        </div>
+        <canvas id="myChart" width="400" height="400"></canvas>
+
+
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+
+        <!-- NERDAMER.CORE.JS -->
+        <!-- This the core and the only file needed if all you'll be doing is evaluating expresssions -->
+        <script src="../nerdamer/nerdamer.core.js"></script>
+        <!-- LOAD ADD-ONS. These files contain extended functions. See documentation -->
+        <!-- again assuming you've saved the files in root -->
+        <script src="../nerdamer/Algebra.js"></script>
+        <script src="../nerdamer/Calculus.js"></script>
+        <script src="../nerdamer/Solve.js"></script>
+        <script src="../nerdamer/Extra.js"></script>
+
+        <!-- CHARTS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/jacobi.js"></script>
+
+</body>
+
+</html>
